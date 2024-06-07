@@ -26,6 +26,11 @@
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #<mnt_point>    <type>  <src>                                   <mnt_flags and options>
+
+/system_image   emmc    /dev/block/mapper/system                flags=backup=1;flashimg=1;display="System Image"
+/vendor_image   emmc    /dev/block/mapper/vendor                flags=backup=1;flashimg=1;display="Vendor Image"
+/product_image  emmc    /dev/block/mapper/product               flags=backup=1;flashimg=1;display="Product Image"
+/odm_image      emmc    /dev/block/mapper/odm                   flags=backup=1;flashimg=1;display="Odm Image"
 /boot           emmc    /dev/block/by-name/boot                 flags=display="Boot";backup=1;flashimg=1;
 /recovery       emmc    /dev/block/by-name/recovery             flags=display="Recovery";backup=1;flashimg=1;
 /metadata       ext4    /dev/block/by-name/metadata             flags=display="Metadata";
